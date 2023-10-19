@@ -104,7 +104,7 @@ elif source_radio == settings.RTSP:
 
 elif source_radio == settings.YOUTUBE:
     helper.play_youtube_video(confidence, model)
-
+"""
 else:
     st.error("Please select a valid source type!")
-"""
+
