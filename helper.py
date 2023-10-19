@@ -1,8 +1,6 @@
 from ultralytics import YOLO
-import time
 import streamlit as st
 import cv2
-from pytube import YouTube
 import settings
 def load_model(model_path):
     """
@@ -17,8 +15,7 @@ def load_model(model_path):
     model = YOLO(model_path)
     return model
 
-
-def _display_detected_frames(conf, model, st_frame, image, is_display_tracking=None, tracker=None):
+#def _display_detected_frames(conf, model, st_frame, image, is_display_tracking=None, tracker=None):
     """
     Display the detected objects on a video frame using the YOLOv8 model.
 
@@ -31,8 +28,8 @@ def _display_detected_frames(conf, model, st_frame, image, is_display_tracking=N
 
     Returns:
     None
+"""
     """
-
     # Resize the image to a standard size
     image = cv2.resize(image, (720, int(720*(9/16))))
 
@@ -51,3 +48,4 @@ def _display_detected_frames(conf, model, st_frame, image, is_display_tracking=N
                    use_column_width=True
                    )
 
+"""
