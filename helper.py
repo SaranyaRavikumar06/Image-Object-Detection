@@ -18,7 +18,6 @@ def load_model(model_path):
     return model
 
 
-"""
 def _display_detected_frames(conf, model, st_frame, image, is_display_tracking=None, tracker=None):
     """
     Display the detected objects on a video frame using the YOLOv8 model.
@@ -51,4 +50,4 @@ def _display_detected_frames(conf, model, st_frame, image, is_display_tracking=N
                    channels="BGR",
                    use_column_width=True
                    )
-"""
+
