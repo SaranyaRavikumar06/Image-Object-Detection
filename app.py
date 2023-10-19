@@ -30,7 +30,7 @@ col1, col2 = st.columns(2)
 with col1:
     if source_img  is not None:
         uploaded_image = Image.open(source_img)
-        st.image(uploaded_img, caption="Uploaded Image",use_column_width=True)
+        st.image(source_img, caption="Uploaded Image",use_column_width=True)
 with col2:
     if st.sidebar.button('Detect Objects'):
         res = model.predict(uploaded_image,conf=confidence)
