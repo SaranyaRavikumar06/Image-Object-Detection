@@ -61,7 +61,7 @@ if source_radio == settings.IMAGE:
             boxes = res[0].boxes
             res_plotted = res[0].plot()[:, :, ::-1]
             st.image(res_plotted, caption='Detected Image',use_column_width=True)
-            st.expander("Detection Results"):
+            st.expander("Detection Results")
             for box in boxes:
                 st.write(box.data)
 else:
