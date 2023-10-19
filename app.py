@@ -52,12 +52,8 @@ if source_radio == settings.IMAGE:
     source_img = st.sidebar.file_uploader("Choose an image...", type=("jpg", "jpeg", "png", 'bmp', 'webp'))
     col1, col2 = st.columns(2)
     with col1:
-        try:
             uploaded_image = PIL.Image.open(source_img)
             st.image(source_img, caption="Uploaded Image",use_column_width=True)
-        except Exception as ex:
-            st.error("Error occurred while opening the image.")
-            st.error(ex)
 
     with col2:
         if st.sidebar.button('Detect Objects'):
@@ -65,12 +61,9 @@ if source_radio == settings.IMAGE:
             boxes = res[0].boxes
             res_plotted = res[0].plot()[:, :, ::-1]
             st.image(res_plotted, caption='Detected Image',use_column_width=True)
-        try:
-            with st.expander("Detection Results"):
-                for box in boxes:
-                    st.write(box.data)
-        except Exception as ex:
-            st.write("No image is uploaded yet!")
+            st.expander("Detection Results"):
+            for box in boxes:
+                st.write(box.data)
 else:
     st.error("Please select a valid source type!")
 
