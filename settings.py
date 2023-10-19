@@ -15,13 +15,13 @@ if root_path not in sys.path:
 ROOT = root_path.relative_to(Path.cwd())
 
 # Sources
-IMAGE = 'Image'
+#IMAGE = 'Image'
 #VIDEO = 'Video'
 #WEBCAM = 'Webcam'
 #RTSP = 'RTSP'
 #YOUTUBE = 'YouTube'
 
-SOURCES_LIST = [IMAGE]
+#SOURCES_LIST = [IMAGE]
 #, VIDEO, WEBCAM, RTSP, YOUTUBE]
 
 # Images config
