@@ -1,10 +1,10 @@
 # Python In-built packages
+from ultralytics import YOLO
 from pathlib import Path
 from PIL import Image
 import streamlit as st
 # Local Modules
 import settings
-import helper
 # Main page heading
 st.title("Object Detection and Segmentation using YOLOv8")
 # Sidebar
@@ -19,7 +19,7 @@ elif model_type == 'Segmentation':
     model_path = Path(settings.SEGMENTATION_MODEL)
 # Load Pre-trained ML Model
 try:
-    model = helper.load_model(model_path)
+    model = YOLO(model_path)
 except Exception as ex:
     st.error(f"Unable to load model. Check the specified path: {model_path}")
     st.error(ex)
@@ -38,5 +38,6 @@ with col2:
         res_plotted = res[0].plot()[:, :, ::-1]
         st.image(res_plotted, caption='Detected Image',use_column_width=True)
         st.expander("Detection Results")
+
 
 
