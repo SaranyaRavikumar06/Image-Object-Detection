@@ -63,7 +63,7 @@ def _display_detected_frames(conf, model, st_frame, image, is_display_tracking=N
                    use_column_width=True
                    )
 
-
+"""
 def play_youtube_video(conf, model):
     """
     Plays a webcam stream. Detects Objects in real-time using the YOLOv8 object detection model.
@@ -229,3 +229,5 @@ def play_stored_video(conf, model):
                     break
         except Exception as e:
             st.sidebar.error("Error loading video: " + str(e))
+
+"""
