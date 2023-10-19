@@ -8,7 +8,7 @@ import settings
 # Main page heading
 st.title("Object Detection and Segmentation using YOLOv8")
 # Sidebar
-st.sidebar.header("ML Model Config")
+st.sidebar.header("Choose the type of Computer Vision to be performed on the Image")
 # Model Options
 model_type = st.sidebar.radio("Select Task", ['Detection', 'Segmentation'])
 confidence = float(st.sidebar.slider("Select Model Confidence", 25, 100, 40)) / 100
